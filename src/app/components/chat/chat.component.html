@@ -1,0 +1,9 @@
+<div [ngClass]="{'justify-start': chatType === 'bot', 'justify-end': chatType === 'user'}"
+     class="flex w-full my-2 overflow-hidden break-words">
+  <span *ngIf='chatType === "bot"' class="bg-teal-600 p-2 rounded-lg text-white w-auto max-w-xs">
+    {{ message }}
+  </span>
+  <span *ngIf='chatType === "user"' class="bg-gray-700 p-2 rounded-lg text-white w-auto max-w-xs">
+    {{ message }}
+  </span>
+</div>

@@ -1,0 +1,4 @@
+<div class="flex flex-col w-full bg-gray-800 h-full min-h-3/4 max-h-3/4 overflow-y-scroll overflow-x-hidden p-4 text-white">
+    <app-chat chatType="bot" message="Hey! How can I help you today?"></app-chat>
+    <app-chat *ngFor="let chat of chatArray" [chatType]="chat.type" [message]="chat.message"></app-chat>
+</div>
