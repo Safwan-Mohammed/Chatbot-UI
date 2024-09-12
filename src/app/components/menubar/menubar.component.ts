@@ -10,5 +10,5 @@ import { LucideAngularModule, XIcon} from 'lucide-angular';
 })
 export class MenubarComponent {
     readonly XIcon = XIcon
-    title : string = "Chatbot"
+    title : string = "SIEMENS"
 }

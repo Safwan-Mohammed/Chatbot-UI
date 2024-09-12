@@ -1,5 +1,19 @@
-<div class="flex flex-row p-4 justify-between align-middle bg-cyan-800 rounded-t-lg">
-    <span class="text-white text-2xl font-semibold tracking-wide ">{{title}}</span>
-    <lucide-icon [img]="XIcon" color="#ffffff" class="cursor-pointer size-8"></lucide-icon>
+<div class="flex flex-col px-4 py-3 rounded-t-lg gradient  gap-3">
+    <div class="flex flex-row justify-between align-middle text-center font-SiemensHeader">
+        <div class="flex flex-row items-center gap-5 w-auto">
+            <div class="imgContainer text-custom-color text-center font-bold flex justify-center items-center">
+                BT
+            </div>
+            <span class="text-white text-3xl font-semibold tracking-wide">{{title}}</span>
+        </div>
+        <lucide-icon [img]="XIcon" color="#ffffff" class="cursor-pointer size-8"></lucide-icon>
+    </div>
+    <div class="flex flex-row gap-4 items-center font-SiemensContent">
+        <span class="text-white text-xl font-SiemensHeader">
+            CHATBOT
+        </span>
+        <div class="text-white font-semibold">
+            Your virtual sidekick, ready for action!        
+        </div>
+    </div>
 </div>
-  

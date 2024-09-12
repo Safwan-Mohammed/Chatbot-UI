@@ -1,0 +1,23 @@
+.lucide{
+    color: #009999;
+    padding: 4px; 
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.active {
+    color: black;
+    background: #33cccc;
+    padding: 4px; 
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.lucide:hover{
+    color: black;
+    background: #33cccc;
+}
+
+.chat_gradient{
+    background-color: #009999;
+}

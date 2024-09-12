@@ -1,5 +1,5 @@
 interface Chat{
-    type : string
+    type : "bot" | "user" | "error" | ""
     message : string
 }
 
