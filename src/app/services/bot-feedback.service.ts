@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import UserFeedback from '../Models/UserFeedbackModel';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +10,7 @@ export class BotFeedbackService {
 
   constructor(private http : HttpClient) {}
 
-  sendUserFeedback(userFeedback : UserFeedback) : void {
+  sendUserFeedback(userFeedback : {value : true | false | "none"}) : void {
     this.http.post(this.businessLogicURL, userFeedback);
   }
 }

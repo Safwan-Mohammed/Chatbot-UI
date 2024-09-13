@@ -15,6 +15,7 @@ export class ChatComponent {
   readonly ThumbsDownIcon = ThumbsDownIcon
   @Input() chatType! : string
   @Input() message! : string
+  @Input() showFeedback! : boolean
 
   constructor(private botFeedbackService : BotFeedbackService){}
 
@@ -29,11 +30,11 @@ export class ChatComponent {
   toggleLike() : void{
     this.likeActive = !this.likeActive
     if(this.likeActive){
-      this.botFeedbackService.sendUserFeedback({botResponse : this.message, value : true})
+      this.botFeedbackService.sendUserFeedback({value : true})
       if(this.dislikeActive) this.dislikeActive = !this.dislikeActive
     }
     if(!this.likeActive && !this.dislikeActive){
-      this.botFeedbackService.sendUserFeedback({botResponse : this.message, value : "none"})      
+      this.botFeedbackService.sendUserFeedback({value : "none"})      
     }
   }
 
@@ -45,11 +46,11 @@ export class ChatComponent {
   toggleDisLike() : void{
     this.dislikeActive = !this.dislikeActive
     if(this.dislikeActive){
-      this.botFeedbackService.sendUserFeedback({botResponse : this.message, value : false})
+      this.botFeedbackService.sendUserFeedback({value : false})
       if(this.likeActive) this.likeActive = !this.likeActive
     }
     if(!this.likeActive && !this.dislikeActive){
-      this.botFeedbackService.sendUserFeedback({botResponse : this.message, value : "none"})      
+      this.botFeedbackService.sendUserFeedback({value : "none"})      
     }
   }
   

@@ -24,8 +24,6 @@ export class ContentComponent {
 
   ngOnChanges() {
     if (this.chatInput && this.chatInput.length > 0) {
-      console.log(this.chatArray);
-
       const userChat: ChatModel = { type: "user", message: this.chatInput };
       this.chatArray.push(userChat);
   
@@ -48,7 +46,7 @@ export class ContentComponent {
       //   }
       // });
       
-      botChat.message = "Yes, Of Course!";
+      botChat.message = "Yes Of Course!";
       botChat.type = "bot";
       this.chatArray.push(botChat);
 
@@ -58,4 +56,7 @@ export class ContentComponent {
     }
   }
   
+  shouldShowFeedback(index: number): boolean {
+    return this.chatArray.length > 1 && (index === this.chatArray.length - 1 || index === this.chatArray.length - 2);
+  }
 }
