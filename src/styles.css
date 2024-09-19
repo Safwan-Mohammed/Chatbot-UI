@@ -16,6 +16,29 @@
     font-weight: normal;
     font-style: normal;
   }
+  ::-webkit-scrollbar-track {
+    background: linear-gradient(0deg, #61f9f9 , #3edede 40%, #2dbdbd 80%, #1ba7b1 90%, #02aeae);
+  }
+  ::-webkit-scrollbar-thumb{
+    border-radius: 4px;
+    background: #177278;
+  }
+  .dark ::-webkit-scrollbar-track{
+    background : linear-gradient(0deg, #059090, #1b9f9f 40%, #249797 80%, #16868e 90%, #028b8b);    
+  }
+
+  .dark ::-webkit-scrollbar-thumb{
+    background: #61f9f9;
+  }
+}
+
+@layer utilities {
+  .custom_gradient {
+    background: linear-gradient(0deg, #61f9f9 , #3edede 40%, #2dbdbd 80%, #1ba7b1 90%, #02aeae); 
+  }
+  .dark_custom_gradient {
+    background : linear-gradient(0deg, #059090, #1b9f9f 40%, #249797 80%, #16868e 90%, #028b8b);
+  }
 }
 
 html,

@@ -1,38 +1,41 @@
 <div [ngClass]="{'justify-start': chatType === 'bot', 'justify-end': chatType === 'user'}"
-  class="flex flex-col w-fit my-2 overflow-hidden break-words font-SiemensContent">
-  <span *ngIf='chatType === "bot"' class="bg-gray-900 p-2 rounded-lg text-white w-auto max-w-xs">
+  class="flex flex-col my-1 w-fit overflow-hidden break-words font-SiemensContent">
+  <span *ngIf='chatType === "bot"' class="bg-gray-200 dark:bg-[#1d2021] p-2 rounded-lg text-black dark:text-white w-auto max-w-xs">
     {{ message }}
   </span>
 
-  <div *ngIf='showFeedback && chatType === "bot"' class="flex justify-end items-center h-auto bg-gray-900 w-fit gap-2 rounded-xl mt-1 font-SiemensContent" style="align-self: flex-end; padding: 0.35rem;">
-    <lucide-icon [img]="ThumbsUpIcon" size="20" [ngClass]="{'lucide': likeActive === false, 'active': likeActive === true}" (click)="toggleLike()"></lucide-icon>
+  <div *ngIf='showFeedback && chatType === "bot"'
+    class="flex justify-end items-center h-auto bg-gray-900 w-fit gap-2 rounded-xl mt-1 font-SiemensContent"
+    style="align-self: flex-end; padding: 0.35rem;">
+    <lucide-icon [img]="ThumbsUpIcon" size="20"
+      [ngClass]="{'lucide': likeActive === false, 'active': likeActive === true}" (click)="toggleLike()"></lucide-icon>
     <div class="border-l-2 border-white h-5"></div>
-    <lucide-icon [img]="ThumbsDownIcon" size="20" [ngClass]="{'lucide': dislikeActive === false, 'active': dislikeActive === true}" (click)="toggleDisLike()"></lucide-icon>
+    <lucide-icon [img]="ThumbsDownIcon" size="20"
+      [ngClass]="{'lucide': dislikeActive === false, 'active': dislikeActive === true}"
+      (click)="toggleDisLike()"></lucide-icon>
   </div>
 
-  <div *ngIf='chatType === "error"' class="max-w-xs bg-white border flex w-full justify-end border-gray-100 rounded-xl shadow-lg dark:bg-neutral-700 dark:border-neutral-500 font-SiemensContent"
+  <div *ngIf='chatType === "error"' class="max-w-xs border my-1 flex w-full justify-end rounded-xl shadow-lg dark:border-red-800 font-SiemensContent"
     role="alert" tabindex="-1" aria-labelledby="hs-toast-error-example-label">
-    <div class="flex p-2">
-        <div>
-            <svg class="size-4 text-red-500 mt-0.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+    <div class="flex p-1.5 bg-red-200 gap-2 dark:bg-red-800 border-0 rounded-lg shadow-inner items-center text-center">
+            <svg class="size-4 text-red-700 dark:text-red-300" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                 fill="currentColor" viewBox="0 0 16 16">
                 <path
                     d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z">
                 </path>
             </svg>
-        </div>
-        <div class="ms-3">
-            <p id="hs-toast-error-example-label" class="text-sm dark:text-neutral-100">
+            <span class=" text-red-900 dark:text-red-100">
                 {{message}}
-            </p>
-        </div>
+            </span>
     </div>
 </div>
 
+
 </div>
 
-<div [ngClass]="{'justify-start': chatType === 'bot', 'justify-end': chatType === 'user'}" class="flex w-full my-2 overflow-hidden break-words font-SiemensContent">
-  <span *ngIf='chatType === "user"' class="chat_gradient p-2 rounded-lg text-white w-auto max-w-xs">
+<div [ngClass]="{'justify-start': chatType === 'bot', 'justify-end': chatType === 'user'}"
+  class="flex w-full my-1 overflow-hidden break-words font-SiemensContent">
+  <span *ngIf='chatType === "user"' class="bg-[#009999] dark:bg-[#3edede] p-2 rounded-lg text-white dark:text-black w-auto max-w-xs">
     {{ message }}
   </span>
 </div>

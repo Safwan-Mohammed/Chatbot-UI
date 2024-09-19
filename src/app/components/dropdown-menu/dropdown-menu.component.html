@@ -1,0 +1,22 @@
+<div class="relative inline-block bg-white dark:bg-[#181a1b] rounded-lg text-left settings-container" 
+    (mouseenter)="onMouseEnter()" 
+    (mouseleave)="onMouseLeave()">
+    
+    <div class="flex flex-row items-center p-1.5 settings-button gap-2 cursor-pointer" [ngClass]="{'expanded': isDropdownOpen}">
+        <lucide-icon [img]="SettingsIcon" color="#009999" class="cursor-pointer size-7 setting" [ngClass]="{'rotated': isDropdownOpen}"></lucide-icon>
+        <span class="text-custom-color font-SiemensContent font-semibold tracking-wide settings-text" [ngClass]="{'visible': isDropdownOpen}">Settings</span>
+    </div>
+
+    <div class="z-10 absolute right-0 mt-2 bg-white dark:bg-[#181a1b] text-custom-color rounded-md shadow divide-y divide-gray-100 dropdown" [ngClass]="{'visible': isDropdownOpen}">
+        <div class="flex flex-row justify-between items-center m-2 p-1 rounded-md hover:bg-slate-200 dark:hover:bg-slate-800 gap-2">
+            <span>Mode</span>
+            <label class="switch flex">
+                <input type="checkbox" (change)="toggleTheme($event)">
+                <span class="toggle-background cursor-pointer bg-custom-color">
+                    <lucide-icon [img]="SunIcon" color="#ffffff" class="icon size-5  sun-icon"></lucide-icon>
+                    <lucide-icon [img]="MoonIcon" color="#ffffff" class="icon size-5 moon-icon"></lucide-icon>
+                </span>
+            </label>
+        </div>
+    </div>
+</div>

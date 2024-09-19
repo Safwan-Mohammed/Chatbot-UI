@@ -1,14 +1,17 @@
 <div class="flex flex-col px-4 py-3 rounded-t-lg gradient  gap-3">
     <div class="flex flex-row justify-between align-middle text-center font-SiemensHeader">
-        <div class="flex flex-row items-center gap-5 w-auto">
-            <div class="imgContainer text-custom-color text-center font-bold flex justify-center items-center">
+        <div class="flex flex-row items-center gap-3 w-auto">
+            <div class="imgContainer bg-white dark:bg-[#181a1b] text-custom-color text-center font-bold flex justify-center items-center">
                 BT
             </div>
-            <div class="flex flex-col items-start justify-center">
-                <span class="text-white text-3xl font-semibold tracking-wide">{{title}}</span>
+            <div class="flex flex-col items-start gap-1 justify-center">
+                <div class="flex flex-row justify-between gap-2 w-full items-center">
+                    <span class="text-white text-4xl font-semibold tracking-wide">{{title}}</span>
+                    <app-dropdown-menu></app-dropdown-menu>
+                </div>
                 <span class="text-white font-semibold font-SiemensContent">Your virtual sidekick, ready for action!</span>
             </div>
         </div>
-        <lucide-icon [img]="XIcon" color="#ffffff" class="cursor-pointer size-8"></lucide-icon>
+        <lucide-icon [img]="XIcon" class="cursor-pointer size-8 text-white dark:text-[#181a1b]"></lucide-icon>
     </div>
 </div>
