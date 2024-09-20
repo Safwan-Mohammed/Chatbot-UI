@@ -4,16 +4,25 @@
     {{ message }}
   </span>
 
-  <div *ngIf='showFeedback && chatType === "bot"'
-    class="flex justify-end items-center h-auto bg-gray-900 w-fit gap-2 rounded-xl mt-1 font-SiemensContent"
-    style="align-self: flex-end; padding: 0.35rem;">
+  <div *ngIf='showFeedback && chatType === "bot"' class="flex justify-end items-center h-auto bg-[#009999] dark:bg-[#1d2021] w-fit gap-2 rounded-xl mt-1 font-SiemensContent" style="align-self: flex-end; padding: 0.35rem;">
+    
     <lucide-icon [img]="ThumbsUpIcon" size="20"
-      [ngClass]="{'lucide': likeActive === false, 'active': likeActive === true}" (click)="toggleLike()"></lucide-icon>
+    [ngClass]="{
+      'text-white hover:bg-white hover:text-[#009999] dark:text-[#009999] hover:dark:text-[#1d2021] hover:dark:bg-[#009999]' : likeActive === false,
+      'bg-white text-[#009999] dark:bg-[#009999] dark:text-[#1d2021]' : likeActive === true
+    }" style="padding:0.25rem; border-radius: 50%; cursor: pointer;"
+    (click)="toggleLike()"></lucide-icon>
+    
     <div class="border-l-2 border-white h-5"></div>
+    
     <lucide-icon [img]="ThumbsDownIcon" size="20"
-      [ngClass]="{'lucide': dislikeActive === false, 'active': dislikeActive === true}"
+    [ngClass]="{
+      'text-white hover:bg-white hover:text-[#009999] dark:text-[#009999] hover:dark:text-[#1d2021] hover:dark:bg-[#009999]' : dislikeActive === false,
+      'bg-white text-[#009999] dark:bg-[#009999] dark:text-[#1d2021]' : dislikeActive === true
+    }" style="padding:0.25rem; border-radius: 50%; cursor: pointer;"
       (click)="toggleDisLike()"></lucide-icon>
-  </div>
+  
+    </div>
 
   <div *ngIf='chatType === "error"' class="max-w-xs border my-1 flex w-full justify-end rounded-xl shadow-lg dark:border-red-800 font-SiemensContent"
     role="alert" tabindex="-1" aria-labelledby="hs-toast-error-example-label">

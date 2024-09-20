@@ -8,15 +8,6 @@
     </div>
 
     <div class="z-10 absolute right-0 mt-2 bg-white dark:bg-[#181a1b] text-custom-color rounded-md shadow divide-y divide-gray-100 dropdown" [ngClass]="{'visible': isDropdownOpen}">
-        <div class="flex flex-row justify-between items-center m-2 p-1 rounded-md hover:bg-slate-200 dark:hover:bg-slate-800 gap-2">
-            <span>Mode</span>
-            <label class="switch flex">
-                <input type="checkbox" (change)="toggleTheme($event)">
-                <span class="toggle-background cursor-pointer bg-custom-color">
-                    <lucide-icon [img]="SunIcon" color="#ffffff" class="icon size-5  sun-icon"></lucide-icon>
-                    <lucide-icon [img]="MoonIcon" color="#ffffff" class="icon size-5 moon-icon"></lucide-icon>
-                </span>
-            </label>
-        </div>
+        <app-theme-toggle></app-theme-toggle>
     </div>
 </div>

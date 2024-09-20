@@ -1,11 +1,32 @@
-.lucide{
+.lucide-light{
+    padding: 0.25rem;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.lucide-light:hover{
     color: #009999;
-    padding: 4px; 
+    background-color: white;
+}
+
+.lucide-night{
+    padding: 0.25rem;
+    color: #009999;
     border-radius: 50%;
     cursor: pointer;
 }
 
-.active {
+.lucide-light-active{
+    color: #009999;
+    background: white;
+    /* #33cccc */
+    padding: 0.25rem; 
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.lucide-dark-active {
     color: black;
     background: #33cccc;
     padding: 4px; 
@@ -13,11 +34,7 @@
     cursor: pointer;
 }
 
-.lucide:hover{
+.lucide-night:hover{
     color: black;
     background: #33cccc;
-}
-
-.chat_gradient{
-    background-color: #009999;
 }

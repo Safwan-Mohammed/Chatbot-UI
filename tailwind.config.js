@@ -14,6 +14,9 @@ module.exports = {
       colors:{
         'custom-color' : '#009999',
       },  
+      borderRadius:{
+        'half' : '30%'
+      },
       fontFamily: {
         SiemensHeader: ['SiemensHeading', 'sans-serif'],
         SiemensContent: ['SiemensContent', 'sans-serif']

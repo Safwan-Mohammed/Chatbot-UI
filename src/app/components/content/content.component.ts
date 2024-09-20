@@ -30,25 +30,25 @@ export class ContentComponent {
       const botChat: ChatModel = this.emptyChat;
   
       // API Call to backend
-      this.botResponseService.fetchBotResponse(this.chatInput).subscribe({
-        next: (response) => {
-          botChat.message = response;
-          botChat.type = "bot";
-          this.chatArray.push(botChat);
-          console.log("Inside next");
-        },
-        error: (error) => {
-          botChat.message = "Error occurred. Please try again.";
-          botChat.type = "error";
-          this.chatArray.push(botChat);
-          this.responseError = true;
-          console.log("Inside error");
-        }
-      });
+      // this.botResponseService.fetchBotResponse(this.chatInput).subscribe({
+      //   next: (response) => {
+      //     botChat.message = response;
+      //     botChat.type = "bot";
+      //     this.chatArray.push(botChat);
+      //     console.log("Inside next");
+      //   },
+      //   error: (error) => {
+      //     botChat.message = "Error occurred. Please try again.";
+      //     botChat.type = "error";
+      //     this.chatArray.push(botChat);
+      //     this.responseError = true;
+      //     console.log("Inside error");
+      //   }
+      // });
       
-      // botChat.message = "Yes Of Course!";
-      // botChat.type = "bot";
-      // this.chatArray.push(botChat);
+      botChat.message = "Yes Of Course!";
+      botChat.type = "bot";
+      this.chatArray.push(botChat);
 
       // Clear the user input for the next chat
       this.userChat = this.emptyChat;
